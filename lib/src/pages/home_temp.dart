@@ -3,8 +3,17 @@ import 'package:flutter/material.dart';
 class HomePageTemp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Home temp'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Componentes App'),
+      ),
+      body: ListView(
+        children: [
+          ListTile(
+            title: Text('Title'),
+          )
+        ],
+      ),
     );
   }
 }
