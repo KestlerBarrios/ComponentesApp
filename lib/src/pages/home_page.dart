@@ -1,4 +1,5 @@
 import 'package:componentes/src/providers/menu_provider.dart';
+import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -33,14 +34,7 @@ class HomePage extends StatelessWidget {
         title: Text(
           opt['texto'],
         ),
-        leading: Icon(
-          Icons.account_circle,
-          color: Colors.blue,
-        ),
-        trailing: Icon(
-          Icons.keyboard_arrow_right,
-          color: Colors.blue,
-        ),
+        leading: getIcon(opt['icon']),
         onTap: () {},
       );
       opciones..add(widgetTemp)..add(Divider());
