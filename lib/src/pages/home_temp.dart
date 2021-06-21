@@ -12,19 +12,19 @@ class HomePageTemp extends StatelessWidget {
     );
   }
 
-  List<Widget> _crearItems() {
-    List<Widget> lista = List<Widget>();
+  // List<Widget> _crearItems() {
+  //   List<Widget> lista = List<Widget>();
 
-    for (var item in opciones) {
-      final tempWidget = ListTile(
-        title: Text(item),
-      );
+  //   for (var item in opciones) {
+  //     final tempWidget = ListTile(
+  //       title: Text(item),
+  //     );
 
-      lista.add(tempWidget);
-    }
+  //     lista.add(tempWidget);
+  //   }
 
-    return lista;
-  }
+  //   return lista;
+  // }
 
   List<Widget> _crearItemsCorto() {
     return opciones.map((item) {
