@@ -1,3 +1,4 @@
+import 'package:componentes/src/pages/alert_page.dart';
 import 'package:componentes/src/providers/menu_provider.dart';
 import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
@@ -22,12 +23,12 @@ class HomePage extends StatelessWidget {
           print('builder');
           print(snapshot.data);
           return ListView(
-            children: _listItems(snapshot.data),
+            children: _listItems(snapshot.data, context),
           );
         });
   }
 
-  List<Widget> _listItems(List<dynamic> data) {
+  List<Widget> _listItems(List<dynamic> data, BuildContext context) {
     final List<Widget> opciones = [];
     data.forEach((opt) {
       final widgetTemp = ListTile(
@@ -35,7 +36,11 @@ class HomePage extends StatelessWidget {
           opt['texto'],
         ),
         leading: getIcon(opt['icon']),
-        onTap: () {},
+        trailing: Icon(Icons.keyboard_arrow_right),
+        onTap: () {
+          final route = MaterialPageRoute(builder: (context) => AlertPage());
+          Navigator.push(context, route);
+        },
       );
       opciones..add(widgetTemp)..add(Divider());
     });
