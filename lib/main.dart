@@ -1,5 +1,5 @@
+import 'package:componentes/src/pages/home_page.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:componentes/src/pages/alert_page.dart';
 import 'package:componentes/src/routes/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: getApplicationRoutes(),
       onGenerateRoute: (settings) {
-        return MaterialPageRoute(builder: (context) => AlertPage());
+        return MaterialPageRoute(builder: (context) => HomePage());
       },
     );
   }
